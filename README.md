@@ -1,5 +1,7 @@
 # my-study-log
 
+このリポジトリは、学習ログアプリに育てるための土台として使います。
+
 このリポジトリには、`gigaschool/tiny-diary` を元にした小さな日記アプリをコピーして配置しています。
 
 - 画面はシンプルなHTML/CSS/JavaScriptで構成
