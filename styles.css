@@ -512,38 +512,162 @@ textarea:focus {
 }
 
 @media (max-width: 560px) {
+  .app-shell {
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 8px;
+    width: min(640px, calc(100% - 16px));
+    height: 100vh;
+    height: 100svh;
+    padding: 8px 0;
+  }
+
   .editor-panel,
   .history-panel {
-    padding: 18px;
+    padding: 12px;
   }
 
   .brand-row,
-  .history-header,
-  .list-tools {
+  .history-header {
     align-items: stretch;
-    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .brand-row {
+    align-items: center;
   }
 
   .save-state,
   .stats-strip {
     align-self: flex-start;
+    min-width: 62px;
+    min-height: 34px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .eyebrow {
+    margin-bottom: 3px;
+  }
+
+  .diary-form {
+    gap: 7px;
+  }
+
+  input[type="date"],
+  .search-box input,
+  select {
+    min-height: 38px;
+  }
+
+  .mood-field {
+    margin-top: 0;
   }
 
   .mood-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 5px;
+    margin-top: 6px;
   }
 
   .mood-option {
-    min-height: 76px;
+    min-height: 58px;
+    gap: 3px;
+    font-size: 0.68rem;
   }
 
-  .list-tools select {
-    flex-basis: auto;
+  .mood-face {
+    font-size: 1.35rem;
+  }
+
+  textarea {
+    min-height: 70px;
+    padding: 8px;
+    line-height: 1.5;
+  }
+
+  .note-meta {
+    font-size: 0.75rem;
+  }
+
+  .action-row {
+    gap: 6px;
+    margin-top: 2px;
   }
 
   .primary-button,
   .ghost-button {
-    flex: 1 1 150px;
+    min-height: 38px;
+    padding: 0 10px;
+    flex-basis: 120px;
+  }
+
+  .history-panel {
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .biorhythm,
+  .summary-row {
+    display: none;
+  }
+
+  .list-tools {
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .list-tools select {
+    flex: 0 0 120px;
+    width: auto;
+  }
+
+  .empty-state {
+    gap: 4px;
+    padding: 10px;
+    font-size: 0.86rem;
+  }
+
+  .entry-list {
+    gap: 6px;
+  }
+
+  .entry-card {
+    gap: 6px;
+    padding: 10px;
+  }
+
+  .entry-date {
+    font-size: 0.9rem;
+  }
+
+  .entry-note {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .entry-actions button {
+    min-height: 32px;
+  }
+
+  .mood-badge {
+    min-height: 28px;
+    font-size: 0.74rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .mood-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .list-tools select {
+    flex-basis: 104px;
   }
 }
     
